@@ -1,9 +1,9 @@
 <?php
 $cont = $_GET['cont'];
 
-$url = "http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont='.$cont.'&output=62
+$url = "https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont='.$cont.'&output=62
 
-$json = file_get_html();
+$json = file_get_html($url);
 
 $get = json_decode($json);
 
