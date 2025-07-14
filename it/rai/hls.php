@@ -5,5 +5,5 @@ $json = file_get_contents('https://mediapolis.rai.it/relinker/relinkerServlet.ht
 
 $get = json_decode($json);
 
-header('Location: '.$get->video[0]');
+header('Location: '.$get->video[0]);
 ?>
