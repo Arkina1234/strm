@@ -1,5 +1,6 @@
 <?php
-$token = file_get_contents('https://npo.nl/start/api/domain/player-token?productId=LI_BVN_4589107');
+$context = stream_context_create(array("http" => array("header" => "User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36")));
+$token = file_get_contents('https://npo.nl/start/api/domain/player-token?productId=LI_BVN_4589107', false, $context);
 $auth = json_decode($token);
 
 $ch = curl_init();
