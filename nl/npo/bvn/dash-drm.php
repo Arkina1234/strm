@@ -16,7 +16,7 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'Accept: */*',
-    'Authorization: '.$auth->jwt,
+    'Authorization: '.$auth['jwt'],
     'Referer: https://www.bvn.tv/tv-gids/?player=live',
     'Content-type: application/json',
 ]);
