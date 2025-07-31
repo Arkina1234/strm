@@ -1,22 +1,15 @@
 <?php
-$context = stream_context_create(
-    array(
-        'http' => array(
-            'header' => "User-Agent: ' . $_SERVER['HTTP_USER_AGENT']
-        )
-    )
-);
-
 $token = file_get_contents('https://npo.nl/start/api/domain/player-token?productId=LI_BVN_4589107', true, $context);
-$auth = json_decode($token, true);
+$auth = json_decode($token;
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://prod.npoplayer.nl/stream-link');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36');
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'Accept: */*',
-    'Authorization: '.$auth['jwt'],
+    'Authorization: '.$auth->jwt,
     'Referer: https://www.bvn.tv/tv-gids/?player=live',
     'Content-type: application/json',
 ]);
