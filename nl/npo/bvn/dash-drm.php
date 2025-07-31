@@ -1,6 +1,6 @@
 <?php
 $token = file_get_contents('https://npo.nl/start/api/domain/player-token?productId=LI_BVN_4589107', true, $context);
-$auth = json_decode($token;
+$auth = json_decode($token);
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://prod.npoplayer.nl/stream-link');
