@@ -6,7 +6,7 @@ $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://prod.npoplayer.nl/stream-link');
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-curl_setopt($ch, CURLOPT_USERAGENT,'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36');
+curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36');
 curl_setopt($ch, CURLOPT_HTTPHEADER, [
     'Accept: */*',
     'Authorization: '.$auth->jwt,
