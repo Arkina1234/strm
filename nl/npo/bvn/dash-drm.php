@@ -1,5 +1,5 @@
 <?php
-$token = file_get_contents('https://npo.nl/start/api/domain/player-token?productId=LI_BVN_4589107', true, $context);
+$token = file_get_contents('https://npo.nl/start/api/domain/player-token?productId=LI_BVN_4589107');
 $auth = json_decode($token);
 
 $ch = curl_init();
