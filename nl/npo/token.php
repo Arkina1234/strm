@@ -7,5 +7,5 @@ $context = stream_context_create(
     )
 );
 $token = file_get_contents('https://npo.nl/start/api/domain/player-token?productId=LI_BVN_4589107', false, $context);
-var_dump(json_decode($token, true));
+var_dump(json_decode($token));
 ?>
