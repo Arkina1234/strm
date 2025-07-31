@@ -8,7 +8,7 @@ $context = stream_context_create(
 );
 
 $token = file_get_contents('https://npo.nl/start/api/domain/player-token?productId=LI_BVN_4589107', false, $context);
-$auth = json_decode($token);
+$auth = json_decode($token, true);
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, 'https://prod.npoplayer.nl/stream-link');
